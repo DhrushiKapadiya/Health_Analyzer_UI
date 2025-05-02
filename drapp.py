@@ -206,9 +206,9 @@ def register():
 
 
 
-    st.markdown("<h1 style='text-align: center; font-size: 52px;'>📝 Register New Account</h1>", unsafe_allow_html=True)
-    col1, col2, col3 = st.columns([1, 2, 1])  # Center column is wider
-    st.markdown(
+     st.markdown("<h1 style='text-align: center; font-size: 52px;'>📝 Register New Account</h1>", unsafe_allow_html=True)
+     col1, col2, col3 = st.columns([1, 2, 1])  # Center column is wider
+     st.markdown(
                  """
                  <style>
                       .stTextInput > label {
@@ -228,9 +228,9 @@ def register():
                 """,
                 unsafe_allow_html=True
             )
-    with col2:
-        new_username = st.text_input("👤 Choose a User Name")
-        new_password = st.text_input("🔑 Choose a Password", type="password")
+     with col2:
+         new_username = st.text_input("👤 Choose a User Name")
+         new_password = st.text_input("🔑 Choose a Password", type="password")
 
     col4, col5, col6 = st.columns([5, 1, 2])
     with col5:
