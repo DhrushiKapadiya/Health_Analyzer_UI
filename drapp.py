@@ -68,7 +68,7 @@ BACKGROUND_IMAGES = {
 
     # "Brain Tumor": "Images/brain tumor.jpg",
     "Parkinson's Disease": "Images/parkison's1.jpg",
-    "Migraine & Chronic Headaches": "Images/Migraine & Chronic Headaches1.jpg",
+    "Migraine & Chronic Headaches": "Images/Migraine_Chronic_Headaches1.jpg",
     "Sleep Disorders": "Images/sleep1.jpg",
 
     "Asthma": "Images/asthma.jpg",
