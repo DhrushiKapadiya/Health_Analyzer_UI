@@ -194,7 +194,16 @@ def login():
 
 
 def register():
-    set_background(Image.open("Images/backgroundlogin2.jpg"))
+#     set_background(Image.open("Images/backgroundlogin2.jpg"))
+ 
+
+def set_background(image_path):
+    if os.path.exists(image_path):
+        image = Image.open(image_path)
+        st.image(image, use_column_width=True)
+    else:
+        st.error(f"Image not found: {image_path}")
+
 
 
     st.markdown("<h1 style='text-align: center; font-size: 52px;'>📝 Register New Account</h1>", unsafe_allow_html=True)
