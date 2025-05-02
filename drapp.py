@@ -58,7 +58,7 @@ Dengue_model = pickle.load(open(f'{working_dir}/saved_models/dengue_model.sav', 
 USER_DB_FILE = "users.csv"
 
 BACKGROUND_IMAGES = {
-    "Heart Diseases": "Health_Analyzer_UI/Images/heart1.jpg",
+    "Heart Diseases": "Images/heart1.jpg",
     "Hypertension": "Images/hypertension1.jpg",
     "Stroke": "Images/stroke.jpg",
     "Heart Failure": "Images/heart failure1.jpg",
@@ -194,7 +194,8 @@ def login():
 
 
 def register():
-    set_background("Images/backgroundlogin2.jpg")
+    image = Image.open("Images/backgroundlogin2.jpg")
+    set_background(image)
     Image.open("Images/backgroundlogin2.jpg")
     st.markdown("<h1 style='text-align: center; font-size: 52px;'>📝 Register New Account</h1>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns([1, 2, 1])  # Center column is wider
