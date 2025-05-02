@@ -9,9 +9,8 @@ import numpy as np
 from fpdf import FPDF
 from sklearn.preprocessing import StandardScaler 
 from datetime import datetime
-import base64https://github.com/DhrushiKapadiya/Health_Analyzer_UI/edit/main/drapp.py
+import base64
 from joblib import load
-from PIL import Image
 
 scaler = StandardScaler()
 
@@ -194,9 +193,7 @@ def login():
 
 
 def register():
-    
     set_background("Images/backgroundlogin2.jpg")
-    Image.open("Images/backgroundlogin2.jpg")
     st.markdown("<h1 style='text-align: center; font-size: 52px;'>📝 Register New Account</h1>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns([1, 2, 1])  # Center column is wider
     st.markdown(
