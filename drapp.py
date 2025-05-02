@@ -57,7 +57,7 @@ Dengue_model = pickle.load(open(f'{working_dir}/saved_models/dengue_model.sav', 
 USER_DB_FILE = "users.csv"
 
 BACKGROUND_IMAGES = {
-    "Heart Diseases": "Images/heart1.jpg",
+    "Heart Diseases": "Images/heart1.png",
     "Hypertension": "Images/hypertension1.jpg",
     "Stroke": "Images/stroke.jpg",
     "Heart Failure": "Images/heart failure1.jpg",
