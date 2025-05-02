@@ -11,7 +11,6 @@ from sklearn.preprocessing import StandardScaler
 from datetime import datetime
 import base64
 from joblib import load
-from PIL import Image
 
 scaler = StandardScaler()
 
@@ -58,7 +57,7 @@ Dengue_model = pickle.load(open(f'{working_dir}/saved_models/dengue_model.sav', 
 USER_DB_FILE = "users.csv"
 
 BACKGROUND_IMAGES = {
-    "Heart Diseases": "Images/heart1.png",
+    "Heart Diseases": "Images/heart1.jpg",
     "Hypertension": "Images/hypertension1.jpg",
     "Stroke": "Images/stroke.jpg",
     "Heart Failure": "Images/heart failure1.jpg",
@@ -69,7 +68,7 @@ BACKGROUND_IMAGES = {
 
     # "Brain Tumor": "Images/brain tumor.jpg",
     "Parkinson's Disease": "Images/parkison's1.jpg",
-    "Migraine & Chronic Headaches": "Images/Migraine_Chronic_Headaches1.jpg",
+    "Migraine & Chronic Headaches": "Images/Migraine & Chronic Headaches1.jpg",
     "Sleep Disorders": "Images/sleep1.jpg",
 
     "Asthma": "Images/asthma.jpg",
@@ -194,21 +193,10 @@ def login():
 
 
 def register():
- 
- 
-#     set_background(Image.open("Images/backgroundlogin2.jpg"))
- def set_background(image_path):
-  if os.path.exists(image_path):
-   image = Image.open(image_path)
-   st.image(image, use_column_width=True)
-  else:
-   st.error(f"Image not found: {image_path}")
-
-
-
-     st.markdown("<h1 style='text-align: center; font-size: 52px;'>📝 Register New Account</h1>", unsafe_allow_html=True)
-     col1, col2, col3 = st.columns([1, 2, 1])  # Center column is wider
-     st.markdown(
+    set_background("Images/backgroundlogin2.jpg")
+    st.markdown("<h1 style='text-align: center; font-size: 52px;'>📝 Register New Account</h1>", unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1, 2, 1])  # Center column is wider
+    st.markdown(
                  """
                  <style>
                       .stTextInput > label {
@@ -228,9 +216,9 @@ def register():
                 """,
                 unsafe_allow_html=True
             )
-     with col2:
-         new_username = st.text_input("👤 Choose a User Name")
-         new_password = st.text_input("🔑 Choose a Password", type="password")
+    with col2:
+        new_username = st.text_input("👤 Choose a User Name")
+        new_password = st.text_input("🔑 Choose a Password", type="password")
 
     col4, col5, col6 = st.columns([5, 1, 2])
     with col5:
