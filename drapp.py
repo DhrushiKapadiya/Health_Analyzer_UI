@@ -194,7 +194,7 @@ def login():
 
 
 def register():
-    # set_background("Images/backgroundlogin2.jpg")
+    set_background("Images/backgroundlogin2.jpg")
     Image.open("Images/backgroundlogin2.jpg")
     st.markdown("<h1 style='text-align: center; font-size: 52px;'>📝 Register New Account</h1>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns([1, 2, 1])  # Center column is wider
